@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name Motor)(type Legacy)(uri ${KIPRJMOD}/lib/Motor.lib)(options "")(descr ""))
+  (lib (name RT9193-33GB)(type Legacy)(uri ${KIPRJMOD}/lib/RT9193-33GB.lib)(options "")(descr ""))
+  (lib (name UE27AC54100)(type Legacy)(uri ${KIPRJMOD}/lib/UE27AC54100.lib)(options "")(descr ""))
+)
