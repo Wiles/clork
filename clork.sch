@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:clork-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -468,8 +469,6 @@ F 3 "" H 4775 2325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4775 2325 4775 2350
-Wire Wire Line
 	4775 2600 4775 2675
 Wire Wire Line
 	4775 2675 4950 2675
@@ -837,25 +836,14 @@ Wire Wire Line
 $Comp
 L Device:R_Small R5
 U 1 1 5E36936F
-P 4675 2500
-F 0 "R5" H 4525 2550 50  0000 L CNN
-F 1 "10k" H 4500 2450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4675 2500 50  0001 C CNN
-F 3 "~" H 4675 2500 50  0001 C CNN
-	1    4675 2500
-	1    0    0    -1  
+P 7650 2825
+F 0 "R5" H 7500 2875 50  0000 L CNN
+F 1 "10k" H 7475 2775 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7650 2825 50  0001 C CNN
+F 3 "~" H 7650 2825 50  0001 C CNN
+	1    7650 2825
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4675 2875 4675 2600
-Wire Wire Line
-	4675 2875 4950 2875
-Wire Wire Line
-	4675 2350 4775 2350
-Connection ~ 4775 2350
-Wire Wire Line
-	4775 2350 4775 2400
-Wire Wire Line
-	4675 2350 4675 2400
 $Comp
 L Device:Jumper_NO_Small JP1
 U 1 1 5E37C806
@@ -928,4 +916,53 @@ F 3 "" H 4375 5425 50  0001 C CNN
 	1    4375 5425
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4775 2325 4775 2400
+$Comp
+L power:GND #PWR0117
+U 1 1 5E1447F7
+P 7800 3150
+F 0 "#PWR0117" H 7800 2900 50  0001 C CNN
+F 1 "GND" H 7805 2977 50  0000 C CNN
+F 2 "" H 7800 3150 50  0001 C CNN
+F 3 "" H 7800 3150 50  0001 C CNN
+	1    7800 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5E14541A
+P 7650 3050
+F 0 "R6" H 7500 3100 50  0000 L CNN
+F 1 "10k" H 7475 3000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7650 3050 50  0001 C CNN
+F 3 "~" H 7650 3050 50  0001 C CNN
+	1    7650 3050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 2825 7800 2825
+Wire Wire Line
+	7800 2825 7800 3050
+Wire Wire Line
+	7750 3050 7800 3050
+Connection ~ 7800 3050
+Wire Wire Line
+	7800 3050 7800 3150
+Text GLabel 7500 2825 0    50   Input ~ 0
+BOOT0
+Text GLabel 7500 3050 0    50   Input ~ 0
+BOOT1
+Wire Wire Line
+	7500 2825 7550 2825
+Wire Wire Line
+	7550 3050 7500 3050
+Text GLabel 4900 2875 0    50   Input ~ 0
+BOOT0
+Wire Wire Line
+	4900 2875 4950 2875
+Text GLabel 4900 3975 0    50   Input ~ 0
+BOOT1
+Wire Wire Line
+	4900 3975 4950 3975
 $EndSCHEMATC
