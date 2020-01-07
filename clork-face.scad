@@ -26,8 +26,8 @@ thickness = 6;
 font="Consolas:style=Bold";
 letter_height=.4;
 
-m2_tap=1.6/2;
-m3_tap=2.5/2;
+m2_tap=1.75/2;
+m3_tap=2.7/2;
 
 num=len(labels);
 
