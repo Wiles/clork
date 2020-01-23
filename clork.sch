@@ -314,9 +314,9 @@ Wire Wire Line
 	3525 6850 3625 6850
 Wire Wire Line
 	3225 6500 3750 6500
-Text GLabel 6350 4875 2    50   Input ~ 0
-USB+
 Text GLabel 6350 4975 2    50   Input ~ 0
+USB+
+Text GLabel 6350 4875 2    50   Input ~ 0
 USB-
 Wire Wire Line
 	6350 4975 6250 4975
