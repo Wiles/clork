@@ -20,7 +20,7 @@ hours_sparse = [
 $fn=120;
 labels = days;
 clork_radius = 100;
-hole_radius = 5.5;
+hole_radius = 4.75;
 bar_length = 40;
 thickness = 6;
 font="Consolas:style=Bold";
@@ -55,16 +55,16 @@ translate([-17.5, 8, -1])
     cylinder(thickness - 1, m3_tap);
 }
 
-translate([-11.25, -26.25, -1])
+translate([-11.75, -10, -1])
     cylinder(thickness - 1, m2_tap);
 }
-translate([11.25, -26.25, -1])
+translate([11.75, -10, -1])
     cylinder(thickness - 1, m2_tap);
 }
-translate([-11.25, -52.5, -1])
+translate([-11.75, -10 - 26.25, -1])
     cylinder(thickness - 1, m2_tap);
 }
-translate([11.25, -52.5, -1])
+translate([11.75, -10 - 26.25, -1])
     cylinder(thickness - 1, m2_tap);
 }
 rotate(90)
