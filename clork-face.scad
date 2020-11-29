@@ -26,15 +26,21 @@ tides = [
   "LOW", "5", "4", "3", "2", "1",
 ];
 
+moon = [
+"🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"
+];
+
 
 $fn=120;
 labels = days;
+display_bars = true;
 text_rotate = false;
 clork_radius = 100;
 hole_radius = 4.75;
 bar_length = 40;
 thickness = 6;
-font="Consolas:style=Bold";
+font="DejaVu Sans";
+font_size=10;
 letter_height=.4;
 
 m2_tap=1.75/2;
@@ -81,19 +87,27 @@ difference(){
 
 // Labels
 for (i=[0:num])  {
-  rotate(360/num * (num - i)) {
-    translate([0, clork_radius - bar_length/2, thickness]) {
-      color("green") {
-        cube([0.8, bar_length, 1.6], true);
-        translate([12, bar_length/2 - 3, -1.4]) {
-          rotate(90) {
-            linear_extrude(height = 2)
-              text(labels[i], font=font, size=10, halign="right", $fn=16);
-          }
-        }
-      }
-    }
-  }
+  degrees = 360/num * (num - i);
+  rotate(degrees)
+    translate([0, clork_radius - 14, thickness])
+      color("green")
+        linear_extrude(height = 2)
+          rotate(text_rotate ? -degrees : 0)
+          text(
+            labels[i], 
+            font=font, 
+            size=font_size, 
+            halign="center",
+            valign="center",
+            $fn=16
+          );
+  
+    
+  if (display_bars)
+    rotate(360/num * (num - i + 0.5))
+      translate([0, clork_radius - bar_length/2, thickness]) 
+          color("green")
+            cube([0.8, bar_length, 1.6], true);
 }
 
 
