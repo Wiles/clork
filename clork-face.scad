@@ -21,6 +21,12 @@ hours_sparse = [
   "18", "21",
 ];
 
+tides = [
+  "HIGH", "5", "4", "3", "2", "1",
+  "LOW", "5", "4", "3", "2", "1",
+];
+
+
 $fn=120;
 labels = days;
 text_rotate = false;
